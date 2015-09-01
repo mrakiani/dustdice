@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DustDice Casino</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon-black.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/css/landing.css">
+</head>
+<body>
+
+<!--<script>-->
+    <!--jqueryReadyQueue = [];-->
+<!--</script>-->
+
+<div id="landing-background">
+    <div id="landing-container" class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" {% if landing %} class="active" {% endif %}><a href="/">Home</a></li>
+                    <li role="presentation" {% if faq %} class="active" {% endif %}><a href="/faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="logo-container">
+                <a href="/">
+                    <img src="img/powder-blue-icon.png">
+                    <h3 class="text-muted">DustDice</h3>
+                </a>
+            </div>
+
+        </div>
+
+        {% block content %}  {% endblock %}
+
+        <footer class="footer">
+            <p>&copy; DustDice 2015 by <a href="https://moneypot.com">Team MoneyPot</a></p>
+        </footer>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https:////maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+<!--<script>-->
+    <!--$(function() {-->
+        <!--while(jqueryReadyQueue.length){-->
+            <!--jqueryReadyQueue.shift()($);-->
+        <!--}-->
+    <!--});-->
+<!--</script>-->
+
+</body>
+</html>
